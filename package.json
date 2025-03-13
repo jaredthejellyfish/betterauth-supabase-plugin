@@ -24,14 +24,17 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
+      "require": "./dist/index.js",
       "default": "./dist/index.js"
     },
     "./client": {
       "types": "./dist/client-plugin.d.ts",
       "import": "./dist/client-plugin.js",
+      "require": "./dist/client-plugin.js",
       "default": "./dist/client-plugin.js"
     }
   },
+  "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -39,7 +42,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "bun build ./index.ts ./client-plugin.ts --outdir ./dist --target node --minify --sourcemap",
+    "build": "bun build ./index.ts ./client-plugin.ts --outdir ./dist --target node --format esm --minify --sourcemap",
     "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
     "prepublishOnly": "bun run build && bun run build:types",
     "test": "bun test",

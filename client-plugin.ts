@@ -75,3 +75,6 @@ export const supabaseJWTClient = () => {
     }
   } satisfies BetterAuthClientPlugin;
 };
+
+// Default export for backwards compatibility
+export default supabaseJWTClient;

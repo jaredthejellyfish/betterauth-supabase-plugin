@@ -70,3 +70,9 @@ export const supabaseJWT = (options: SupabaseJWTOptions) => {
         }
     } satisfies BetterAuthPlugin;
 };
+
+// Re-export for easier imports
+export { supabaseJWTClient } from './client-plugin';
+
+// Default export for backwards compatibility
+export default { supabaseJWT };
