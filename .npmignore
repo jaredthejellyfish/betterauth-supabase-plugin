@@ -1,6 +1,7 @@
 # Source files
 *.ts
 !*.d.ts
+!dist/**/*.d.ts
 
 # Development files
 node_modules/
