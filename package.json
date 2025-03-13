@@ -2,14 +2,24 @@
   "name": "better-auth-supabase-plugin",
   "version": "1.0.0",
   "description": "Supabase JWT authentication plugin for Better Auth",
-  "type": "module",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "sideEffects": false,
-  "files": [
-    "dist",
-    "README.md"
+  "keywords": [
+    "better-auth",
+    "supabase",
+    "jwt",
+    "authentication"
   ],
+  "homepage": "https://github.com/avjco/betterauth-supabase-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/avjco/betterauth-supabase-plugin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avjco/betterauth-supabase-plugin.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "sideEffects": false,
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -22,9 +32,16 @@
       "default": "./dist/client-plugin.js"
     }
   },
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
-    "build": "tsup",
-    "prepublishOnly": "npm run build",
+    "build": "bun build ./index.ts ./client-plugin.ts --outdir ./dist --target node --minify --sourcemap",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
+    "prepublishOnly": "bun run build && bun run build:types",
     "test": "bun test",
     "test:watch": "bun test --watch"
   },
@@ -35,25 +52,9 @@
   "devDependencies": {
     "@types/bun": "latest",
     "bun-types": "latest",
-    "tsup": "^8.4.0"
+    "typescript": "^5.0.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  },
-  "keywords": [
-    "better-auth",
-    "supabase",
-    "jwt",
-    "authentication"
-  ],
-  "author": "",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/avjco/betterauth-supabase-plugin.git"
-  },
-  "bugs": {
-    "url": "https://github.com/avjco/betterauth-supabase-plugin/issues"
-  },
-  "homepage": "https://github.com/avjco/betterauth-supabase-plugin#readme"
+  }
 }

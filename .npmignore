@@ -10,7 +10,6 @@ test/
 .git/
 .gitignore
 tsconfig.json
-tsup.config.ts
 bun.lock
 
 # Editor files
