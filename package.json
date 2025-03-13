@@ -8,13 +8,13 @@
     "jwt",
     "authentication"
   ],
-  "homepage": "https://github.com/avjco/betterauth-supabase-plugin#readme",
+  "homepage": "https://github.com/jaredthejellyfish/betterauth-supabase-plugin#readme",
   "bugs": {
-    "url": "https://github.com/avjco/betterauth-supabase-plugin/issues"
+    "url": "https://github.com/jaredthejellyfish/betterauth-supabase-plugin/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/avjco/betterauth-supabase-plugin.git"
+    "url": "https://github.com/jaredthejellyfish/betterauth-supabase-plugin"
   },
   "license": "MIT",
   "author": "",
