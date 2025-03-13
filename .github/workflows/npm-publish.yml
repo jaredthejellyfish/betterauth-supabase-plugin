@@ -31,7 +31,9 @@ jobs:
         run: |
           RELEASE_VERSION=${GITHUB_REF#refs/tags/}
           RELEASE_VERSION=${RELEASE_VERSION#v}
-          bun x npm version $RELEASE_VERSION --no-git-tag-version
+          echo "Setting version to $RELEASE_VERSION"
+          # Use npm version with --allow-same-version to ensure it works even if the version is already set
+          bun x npm version $RELEASE_VERSION --allow-same-version --no-git-tag-version
       
       - name: Publish to npm
         run: bun x npm publish
