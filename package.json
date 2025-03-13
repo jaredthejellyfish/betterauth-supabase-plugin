@@ -1,6 +1,6 @@
 {
   "name": "better-auth-supabase-plugin",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Supabase JWT authentication plugin for Better Auth",
   "keywords": [
     "better-auth",
