@@ -1,0 +1,19 @@
+{
+  "name": "better-auth-supabase-plugin",
+  "type": "module",
+  "module": "index.ts",
+  "scripts": {
+    "test": "bun test",
+    "test:watch": "bun test --watch"
+  },
+  "dependencies": {
+    "better-auth": "^1.2.3"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
