@@ -10,6 +10,7 @@ This release focuses on improving the package exports to make it easier to impor
 - **Improved TypeScript Declarations**: Fixed TypeScript declaration files to properly expose all exported functions
 - **Added Default Exports**: Added default exports for backwards compatibility
 - **Re-exported Client Plugin**: The client plugin is now re-exported from the main module for easier imports
+- **Switched to tsup**: Replaced Bun build with tsup for more reliable TypeScript builds and declaration file generation
 
 ### Usage Examples
 
@@ -42,8 +43,10 @@ const clientPlugin = supabaseJWTClient();
 
 - Fixed issue with TypeScript declaration files not being generated correctly
 - Improved build process to ensure consistent output
+- Resolved TypeScript error TS5055 related to declaration file generation
 
 ### Development
 
 - Added test file to verify correct exports
-- Updated build scripts for better compatibility 
+- Updated build scripts for better compatibility
+- Added dual ESM/CommonJS output format support 
