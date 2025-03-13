@@ -1,19 +1,56 @@
 {
   "name": "better-auth-supabase-plugin",
+  "version": "1.0.0",
+  "description": "Supabase JWT authentication plugin for Better Auth",
   "type": "module",
-  "module": "index.ts",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client-plugin.d.ts",
+      "import": "./dist/client-plugin.js"
+    }
+  },
   "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build",
     "test": "bun test",
     "test:watch": "bun test --watch"
   },
   "dependencies": {
-    "better-auth": "^1.2.3"
+    "better-auth": "^1.2.3",
+    "jose": "^6.0.10"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "tsup": "^8.4.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  }
+  },
+  "keywords": [
+    "better-auth",
+    "supabase",
+    "jwt",
+    "authentication"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avjco/betterauth-supabase-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/avjco/betterauth-supabase-plugin/issues"
+  },
+  "homepage": "https://github.com/avjco/betterauth-supabase-plugin#readme"
 }

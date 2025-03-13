@@ -1,0 +1,25 @@
+# Source files
+*.ts
+!*.d.ts
+
+# Development files
+node_modules/
+test/
+.github/
+.git/
+.gitignore
+tsconfig.json
+tsup.config.ts
+bun.lock
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log* 
