@@ -2,8 +2,9 @@ import type {
   BetterAuthClientPlugin,
   BetterFetchOption,
 } from "better-auth/client";
-import type { supabaseJWT } from ".";
+import type { supabaseJWT } from "./dist/index.js";
 import { atom, computed } from "nanostores";
+import "client-only";
 
 export interface SupabaseJWTResponse {
   token: string;
