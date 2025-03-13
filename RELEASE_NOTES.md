@@ -1,3 +1,29 @@
+# Release Notes - v0.0.3
+
+## Server-Only Integration
+
+This release adds integration with the "server-only" package to ensure certain code only runs on the server.
+
+### Changes
+
+- **Added Server-Only Package**: Integrated the "server-only" package to prevent server-side code from being executed in client environments
+- **Improved Type Safety**: Enhanced type definitions for better developer experience
+- **Dependency Updates**: Updated dependencies to their latest compatible versions
+
+### Usage
+
+The API remains the same as in previous versions:
+
+```typescript
+import { supabaseJWT } from "better-auth-supabase-plugin";
+
+const plugin = supabaseJWT({
+  jwtSecret: "your-secret-key"
+});
+```
+
+---
+
 # Release Notes - v0.0.2
 
 ## Improved Package Exports
